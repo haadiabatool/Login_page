@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* font-family:Arial, Helvetica, sans-serif;  if not remove*/
+    padding:20px;
+}
+
+/* Form styling */
+.formForSignIn{
+    color:black;
+    width:400px;
+    padding:40px;
+    /* height:400px;    if not remove*/
+    background:#303088;
+    /* background: linear-gradient(135deg, #344386, #7106db,#4e4ed8,#28287c); */
+    background: #e4dddd;
+
+
+    border-radius:15px;
+    padding:100px;
+    /* display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center; */
+    box-shadow:12px 12px 10px black;
+    /* box-shadow:0 15px 35px rgba(0,0,0,0.2) */
+}
+
+.formForSignIn h2{
+    text-align:center;
+    margin-bottom:20px;
+    font-size:xx-large;
+}
+.formForSignIn label{
+    font-size: large;
+    font-weight: 500;
+}
+.formForSignIn input{
+    width:100%;
+    padding:10px;
+    height:30px;
+    border-radius:9px;
+    box-shadow: 2px 2px 2px  black;
+    transition:0.3s ease;
+}
+.formForSignIn input:focus{
+    outline:none;
+    border-color:#667eea;
+    box-shadow:0 0 6px rgba(102,126,234,0.5);
+}
+#rememberLabel{
+    display:flex;
+    align-items:center;
+}
+#RememberMe{
+    width:auto;
+    margin-right:6px;
+    box-shadow:none;
+}
+.formForSignIn button{
+    width:100%;
+    height:30px;
+    border:none;
+    background:#667eea;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:25px;
+    box-shadow:3px 3px black;   
+    transition:0.3 ease;
+}
+button:hover{
+    background:#4c59ce;
+}
+
+.signupText {
+    text-align:center;
+    margin-top:18px;
+    /* font-size:18px; */
+}
+.signupText a{
+    color:#667eea;
+    text-decoration:none;
+    font-weight:500;
+}
+
+@media (max-width:480){
+    .formForSignIn{
+        padding:30px 20px;
+    }
+}
