@@ -2,7 +2,10 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
+
 }
+/* For Sign In  + Sign Up*/
+
 body{
     display:flex;
     flex-direction:column;
@@ -10,91 +13,135 @@ body{
     align-items:center;
     min-height:100vh;
     background: linear-gradient(135deg, #667eea, #764ba2);
-    /* font-family:Arial, Helvetica, sans-serif;  if not remove*/
     padding:20px;
 }
 
-/* Form styling */
-.formForSignIn{
+/* Form styling Sign In, Sign Up */
+.formContainer{
     color:black;
-    width:400px;
+    width:380px; 
     padding:40px;
-    /* height:400px;    if not remove*/
-    background:#303088;
-    /* background: linear-gradient(135deg, #344386, #7106db,#4e4ed8,#28287c); */
-    background: #e4dddd;
-
-
-    border-radius:15px;
+    background: #e4dede;
+    border-radius:20px;
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,0.15);
     padding:100px;
-    /* display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center; */
     box-shadow:12px 12px 10px black;
-    /* box-shadow:0 15px 35px rgba(0,0,0,0.2) */
+    border-color:rgb(15, 15, 15);
+    margin:40px;
+    transition:all 1s ease-in-out;
+    animation:floatCard 7s ease-in-out infinite;
+    opacity:1;
+    transform:translateY(0);
+    position:absolute;
 }
 
-.formForSignIn h2{
+/* Hidden state */
+.hidden{
+    opacity:0;
+    transform:translateY(-20px);
+    pointer-events:none;
+    transition: all 0.8s ease-in-out;
+}
+
+@keyframes floatCard{
+    0%{
+        transform:translateY(0px);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+    100%{
+        transform:translateY(0px);
+    }
+}
+.formContainer:hover {
+    transform:scale(0.1);
+    box-shadow: 0 0 20px #260849,
+                0 0 40px #15071b,
+                0 0 60px #000002,
+                0 0 60px #3a1d1d;
+}
+
+.formContainer h2{
     text-align:center;
     margin-bottom:20px;
     font-size:xx-large;
+    text-shadow:2px 2px 3px  black;
 }
-.formForSignIn label{
+.formContainer label{
     font-size: large;
     font-weight: 500;
 }
-.formForSignIn input{
+/* For input Field Sign In */
+.formContainer input{
     width:100%;
-    padding:10px;
+    padding:12px;
     height:30px;
-    border-radius:9px;
+    margin:3px 0 3px 0;
+    border-radius:10px;
     box-shadow: 2px 2px 2px  black;
     transition:0.3s ease;
-}
-.formForSignIn input:focus{
+    border:none;
     outline:none;
-    border-color:#667eea;
-    box-shadow:0 0 6px rgba(102,126,234,0.5);
+    transition:all 0.3s ease;
+}
+.formContainer input:focus{
+    transform: scale(1.03);
+    outline:none;
+
+    box-shadow:0 0 6px rgba(33, 36, 51, 0.5);
 }
 #rememberLabel{
     display:flex;
     align-items:center;
+    margin-bottom:-15px;
 }
 #RememberMe{
     width:auto;
     margin-right:6px;
     box-shadow:none;
 }
-.formForSignIn button{
+
+/* Button Styling For Sign In + Sign Up */
+.BtnSignIn,.BtnSignUp{
     width:100%;
     height:30px;
     border:none;
-    background:#667eea;
+    background:linear-gradient(45deg,#667eea,#764ba2);
     color:white;
     font-weight:bold;
     cursor:pointer;
     border-radius:25px;
     box-shadow:3px 3px black;   
-    transition:0.3 ease;
+    transition:all 0.4 ease;
+
 }
-button:hover{
-    background:#4c59ce;
+.BtnSignIn:hover,.BtnSignUp:hover{
+    transform: translateY(-3px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+    background:linear-gradient(45deg,#764ba2,#667eea)
 }
 
-.signupText {
+.paraText {
     text-align:center;
     margin-top:18px;
-    /* font-size:18px; */
 }
-.signupText a{
-    color:#667eea;
+.paraText a{
+    color:#6778c4;
     text-decoration:none;
     font-weight:500;
+    transition:0.3s;
 }
 
+.paraText a:hover{
+    text-decoration:underline;
+}
 @media (max-width:480){
-    .formForSignIn{
+    .formContainer{
+        width:100%;
         padding:30px 20px;
     }
 }
+
+
