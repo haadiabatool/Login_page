@@ -15,5 +15,5 @@ This project is built using HTML&CSS.<br>
 🔷**CSS3** Styling, gradient,shadows, and responsive layout <br>
 🔷**Flexbox** Centering and alignment of the form  <br>
 
-## 🔰 Screenshot
-![Login Page Screenshot](ForGithub.jpeg)
+## 🔰 Project Demo
+![Login Page Video]()
