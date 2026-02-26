@@ -4,24 +4,54 @@
     box-sizing:border-box;
 
 }
-/* For Sign In  + Sign Up*/
 
+/* For theme change  */
+:root{
+    --bg-gradient:linear-gradient(135deg,#ffffff,#764ba2);
+    --card-bg:#beafaf;
+    --text-color:#000;
+}
+body.dark{
+    --bg-gradient:linear-gradient(135deg,#222020,#1d1818);
+    --card-bg:#a5afa1;
+    --text-color:#080808;
+}
+
+/* Theme Button */
+.themeBtn{
+    position:fixed;
+    top:20px;
+    right:20px;
+    border-radius: 14px;
+    width:80px;
+    height:30px;
+    cursor: pointer;
+    border:none;
+    box-shadow: 7px 7px 10px rgba(0, 0, 0, 0.9);
+}
+.themeBtn:hover{
+    background:#a9abb6;
+    transform: scale(1.1);
+}
+
+
+/* For Sign In  + Sign Up*/
 body{
     display:flex;
     flex-direction:column;
     justify-content:center;
     align-items:center;
     min-height:100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    background: var(--bg-gradient);
     padding:20px;
 }
 
 /* Form styling Sign In, Sign Up */
 .formContainer{
-    color:black;
+    color:var(--text-color);
     width:380px; 
     padding:40px;
-    background: #e4dede;
+    background:var(--card-bg);
     border-radius:20px;
     backdrop-filter:blur(10px);
     border:1px solid rgba(255,255,255,0.15);
@@ -143,5 +173,4 @@ body{
         padding:30px 20px;
     }
 }
-
 
