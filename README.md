@@ -17,4 +17,4 @@ This project is built using HTML&CSS.<br>
 🔷**JavaScript** Form Toggle functionality
 
 ## 🔰 Project Demo
-![Login Page Video](forGitHub.mp4)
+
