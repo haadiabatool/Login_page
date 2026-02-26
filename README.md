@@ -14,6 +14,11 @@ This project is built using HTML&CSS.<br>
 🔷**HTML5** Structure of the login page <br>
 🔷**CSS3** Styling, gradient,shadows, and responsive layout <br>
 🔷**Flexbox** Centering and alignment of the form  <br>
+🔷**JavaScript** Form Toggle functionality
 
-## 🔰 Screenshot
-![Login Page Screenshot](ForGithub.jpeg)
+## 🔰 Project Demo
+![Sign In](Github1.jpeg)
+![SignUp](Github2.jpeg)
+![For Theme Change](Github3.jpeg)
+
+
